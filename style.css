@@ -1,0 +1,26 @@
+*{
+    font-family: fantasy;
+    font-weight: 100;
+    font-size: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+div{
+    height: 200px;
+    width: 200px;
+    margin: 20px;
+    background: paleturquoise;
+    border: 1px solid cadetblue;
+    display: inline-block; /* se alinean los bloques */
+    /* display: inline; *//* Se vuelve una linea*/
+}
+
+/* b por defecto son inline */
+b{
+    height: 200px;
+    width: 200px;
+    margin: 20px;
+    display: inline-block;
+    background: peru;
+}
