@@ -1,3 +1,5 @@
+/* Overflow */
+
 *{
     font-family: fantasy;
     font-weight: 100;
@@ -7,20 +9,15 @@
 }
 
 div{
-    height: 200px;
-    width: 200px;
-    margin: 20px;
-    background: paleturquoise;
-    border: 1px solid cadetblue;
-    display: inline-block; /* se alinean los bloques */
-    /* display: inline; *//* Se vuelve una linea*/
+    margin: 100px;
+    width: 300px;
+    height: 250px;
+    border-radius: 5px;
+    background: rosybrown;
+    overflow: hidden; /* No se ve la imagen por fuera del div */
 }
-
-/* b por defecto son inline */
-b{
-    height: 200px;
-    width: 200px;
-    margin: 20px;
-    display: inline-block;
-    background: peru;
+img{
+    position: relative;
+    top: 50px;
+    right: 100px;
 }
