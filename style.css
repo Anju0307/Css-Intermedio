@@ -1,4 +1,4 @@
-/* Pseudo Clases */
+/* Objet Fit y object position*/
 
 *{
     font-family: fantasy;
@@ -8,58 +8,20 @@
     padding: 0;
 }
 
-.prueba{
-    height: 200px;
-    width: 200px;
-    background: red;
-    transition: background 4s, height 3s, width .2s; /* All 2s *//* Para hacer que todos cambien al mismo tiempo */
-}
-
-.prueba:hover{
-    background: black;
-    color: white;
-    height: 300px;
-    width: 300px;
-}
-a{
-    margin-top: 30px;
-    display: block;
-    text-decoration: none;
-    background: blue;
-    padding: 20px;
-    color: white;
-}
-.a:link{
-    color: white;
-}
-a:visited{
-    color: red;
-}
 .caja{
-    width: 200px;
-    height: 200px;
-    background: salmon;
-    margin-top: 20px;
-    transition: all 2s;
-}
-.caja:active{
-    background: olive;
+    margin: 20px;
     width: 400px;
+    height: 500px;
 }
-.caja2{
-    width: 200px;
-    margin-top: 30px;
-    transition: 2s;
-}
-.caja2:focus{
-    width: 400px;
+.caja img{
+    width: 100%;
+    height: 100%;
+    border: 5px solid black ;
+    object-fit: cover;
+    object-position: -10em; /* Posicion de la imagen (left,rigth,top,button)*/
 }
 
-/* lang casi no se utiliza solo es para definir en que idioma esta el lenguaje */
-.caja3{
-    margin-top: 30px;
-}
-.caja b:lang(es){
-    background-color: black;
-    color: white;
-}
+/* Contain para mantener la resolucion dentro del contenedor */
+/* Cover se ajusta al contenedor y recorta los lados para ajutarse*/
+/* None pone la imagen a la tamaño del contenedor */ 
+/* Scale down se queda con la que tenga la resolucion mas chica */
