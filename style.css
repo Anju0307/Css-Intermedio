@@ -1,5 +1,4 @@
-/* Pseudo Elemento */
-/* No funciona en elementos en inline */
+/* Pseudo Clases */
 
 *{
     font-family: fantasy;
@@ -9,63 +8,58 @@
     padding: 0;
 }
 
-.texto, .texto2, .texto3{
-    padding: 20px;
+.prueba{
+    height: 200px;
+    width: 200px;
+    background: red;
+    transition: background 4s, height 3s, width .2s; /* All 2s *//* Para hacer que todos cambien al mismo tiempo */
 }
 
-/* Primera linea del texto */
-.texto::first-line{
-    color: red;
-}
-
-/* Cambia la primera letra del texto */
-.texto2::first-letter{
-    color: red;
-    font-size: 3rem;
-}
-
-/* Placeholder */
-
-form{
-    margin: 100px auto;
-    display: block;
-    padding: 100px;
-    width: 50%;
-    background: green;
-}
-
-/* Modificar el placeholder */
-
-input{
-    width: 100%;
-    padding: 5px;
-}
-
-input::placeholder{
-    color: blue;
-}
-
-/* Cambie cuando se seleccione */
-
-p::selection{
-    color: white;
+.prueba:hover{
     background: black;
+    color: white;
+    height: 300px;
+    width: 300px;
 }
-
-h1{
+a{
+    margin-top: 30px;
+    display: block;
+    text-decoration: none;
+    background: blue;
+    padding: 20px;
+    color: white;
+}
+.a:link{
+    color: white;
+}
+a:visited{
+    color: red;
+}
+.caja{
+    width: 200px;
+    height: 200px;
+    background: salmon;
     margin-top: 20px;
+    transition: all 2s;
+}
+.caja:active{
+    background: olive;
+    width: 400px;
+}
+.caja2{
+    width: 200px;
+    margin-top: 30px;
+    transition: 2s;
+}
+.caja2:focus{
+    width: 400px;
 }
 
-/* Before = antes */
-
-h1::before{
-    content: "Hola";
-    color: aquamarine;
+/* lang casi no se utiliza solo es para definir en que idioma esta el lenguaje */
+.caja3{
+    margin-top: 30px;
 }
-
-/* After = despues */
-
-h1::after{
-    content: "tal";
-    color: blueviolet;
+.caja b:lang(es){
+    background-color: black;
+    color: white;
 }
