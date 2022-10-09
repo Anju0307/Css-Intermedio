@@ -1,4 +1,4 @@
-/* Formulario con Flex */
+/* Repeat */
 *{
     font-family: monospace;
     font-weight: 100;
@@ -11,8 +11,8 @@ body{
 
 .grid_container{
     display: grid;
-    grid-template-rows: 150px 150px 150px;
-    grid-template-columns: 150px 150px 150px 1fr ;
+    grid-template-rows: repeat(3,150px);
+    grid-template-columns: repeat(3,150px) 1fr ;
     border: 3px solid #000;
     background: #333;
 }
