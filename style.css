@@ -1,47 +1,86 @@
-/* Flex wrap */
+/* Formulario con Flex */
 *{
     font-family: monospace;
     font-weight: 100;
-    font-size: 15px;
-    margin: 0;
-    padding: 0;
+}
+
+body{
+    background: #000;
 }
 
 .flex_container{
     display: flex;
-    /* Hacer varios divs para probar */
-    /*flex-direction: column;  Direccion del flex */
-    /*flex-wrap: wrap; Distribuye el contenido de acuerdo al tamaño */
-    /*flex-flow: column wrap;  Combina los dos de arriba */
-    /*justify-content: space-evenly;  Alinear en el eje X */
-    height: 100vh;
-    /* Flex start funciona con el height de los items y el streach con el del contenedor */
-    /* El align-items funciona para una sola linea en el eje Y */
-    /* El align-content funciona para varias lineas en el eje Y */
-    /* align-content: baseline; */ 
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    background: #444;
+    margin: 50px 50px;
+    padding: 20px;
+    border: 20px solid #000;
+    outline: 4px solid #094;
 }
 
-.flex_item{
-    background: #248;
-    color: #fff;
-    margin: 5px;
-    height: 120px;
-    width: 300px;
+.form{
+    min-width: 400px;
+    flex: 1;
     text-align: center;
+    padding: 30px;
+    order: 5;
 }
 
-.green{
-    background-color: rgb(50, 70, 0);
-    /*flex-grow: 1;  Sirve para repartir el espacio que sobra */
-    /*align-self: center;  Alinear un item */
-    /*flex-basis: 300px;  Cambia el tamaño del width del item */
-    /*flex-shrink: 3;  Cede espacio para que los items del contenedor tengan el tamaño otorgado */
-    flex: 1 0 300px;  /*Shortcut para flex-basis, flex-shrink y flex-grow */
-    order:4; /* Ordena segun el tamaño del item*/
+.form textarea{
+    min-height: 140px;
+    resize: none;
 }
 
-.red{
-    background: rgb(200, 0, 0);
-    /*flex-grow: 2;  Cuando se ponen varios el que tenga el mayor numero tiene mas */
-    order: 3;
+.form_input{
+    width: 100%;
+    padding: 7px;
+    margin: 6px 0;
+    border: none;
+    border-bottom: 3px solid #1c7;
+    background-color: transparent;
+    color: #fff;
 }
+
+.form_input:focus{
+    background: linear-gradient(to right, transparent, #333);
+    outline: none;
+    border-bottom: 3px solid #5d9;
+}
+.form_img{
+    flex: 1;
+    padding: 10px;
+    display: flex;
+    min-width: 300px;
+    max-width: 400px;
+    order: 2;
+}
+
+.form_img img{
+    width: 60%;
+    margin: auto;
+    border-radius: 50%;
+    background: #fff;
+    padding: 15px;
+}
+
+.form input[type="submit"]{
+    background: #094;
+    border-bottom: none;
+    padding: 12px;
+    order: 2;
+}
+
+.form input[type="submit"]:hover{
+    background: #072;
+}
+
+.form input[type="submit"]:focus{
+    background: #094;
+}
+
+.form input[type="submit"]:active{
+    background: linear-gradient(to right, #072, #050);
+}
+
