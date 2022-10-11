@@ -11,63 +11,27 @@ body{
 
 .grid_container{
     display: grid;
-    grid-template-columns: repeat(3,1fr) ;
-    grid-template-rows: repeat(3,1fr);
-    grid-auto-rows: 100px; 
-    border: 3px solid #000;
-    background: #333;
-    height: 600px;
-    align-items: center;
-    justify-items: center;
+    grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
+    grid-auto-rows: 100px;
+    grid-gap: 10px;
 }
 
-.grid_item{
-    border:1px solid #000;
-    background: #999;
-    font-size: 2rem;
-    padding: 50px;
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 3px;
 }
 
-.grid_item:first-child{
-    justify-self: start;
-    align-self: start;
-    background: red;
+img:first-child{
+    grid-column: 1/4;
 }
 
-.grid_item:nth-child(2){
-    align-self: flex-end;
+img:nth-child(6){
+    grid-column: 2/4;
+    grid-row: 3/5;
 }
 
-.grid_item:nth-child(3){
-    align-self: flex-start;
-    justify-self: end;
-    background: red;
-}
-
-.grid_item:nth-child(4){
-    justify-self: end;
-    /* Order:2; es para posicionar la celda segun su numero */
-}
-
-.grid_item:nth-child(5){
-    background: chocolate;
-}
-
-.grid_item:nth-child(6){
-    justify-self: start;
-}
-
-.grid_item:nth-child(7){
-    place-self: end,start; /* Primero align y despues justify */
-    background: red;
-}
-
-.grid_item:nth-child(8){
-    align-self: flex-start;
-}
-
-.grid_item:last-child{
-    align-self: flex-end;
-    justify-self: end;
-    background: red;
+img:nth-child(10){
+    grid-column: span 3;
 }
