@@ -1,4 +1,4 @@
-/* Alineacion en grid */
+/*  */
 *{
     font-family: monospace;
     font-weight: 900;
@@ -7,37 +7,35 @@
     padding: 0;
 }
 
-body{
-    background: radial-gradient(circle, #fff, #bbb);
+.responsive{
+    background: #c95;
 }
 
-.grid_container{
-    display: grid;
-    grid-template-rows: 
-            [f-line]
-            150px
-            [s-line]
-            150px
-            [t-line]
-            150px
-            [f-line];
-    grid-template-columns: 
-            [linea-izquierda]
-            150px
-            150px
-            150px
-            [fin-del-main];
-    margin: 10px;
-    border: 4px solid black;
+@media only screen and (min-width: 400px) and (max-width: 650px) {
+    
+    .responsive{
+         background: red;
+         padding: 10px;
+    }
 }
 
-.grid-item{
-    border: 1px solid black;
-    background: lightblue;
+@media only screen and (min-width: 650px) and (max-width: 800px) {
+    .responsive{
+        background: green;
+        font-size: 50px;
+    }
 }
 
-.grid-item:first-child{
-    background: red;
-    grid-row: f-line/t-line;
-    grid-column: linea-izquierda/fin-del-main;
+@media only screen and (min-width: 800px) and (max-width: 1200px) {
+    .responsive{
+        background: orange;
+        margin: 50px;
+    }
+}
+
+@media only screen and (min-width:1200px){
+    .responsive{
+        background: #000;
+        color: #fff;
+    }
 }
